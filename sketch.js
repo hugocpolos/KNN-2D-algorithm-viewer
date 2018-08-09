@@ -31,19 +31,21 @@ function draw(){
 }
 
 function mousePressed(){
-	switch(mode){
-		case 0: //true mode
-			data.push(new Point(mouseX, mouseY, true));
-			break;
-		case 1: //false mode
-			data.push(new Point(mouseX, mouseY, false));
-			break;
-		case 2: //learn mode
-			let valid = KNN(mouseX, mouseY)
-			data.push(new Point(mouseX, mouseY, valid));
-			break;
-		default:
-			break;
+	if(mouseX >= 0 && mouseX <= width && mouseY >= 0 && mouseY <= height){
+		switch(mode){
+			case 0: //true mode
+				data.push(new Point(mouseX, mouseY, true));
+				break;
+			case 1: //false mode
+				data.push(new Point(mouseX, mouseY, false));
+				break;
+			case 2: //learn mode
+				let valid = KNN(mouseX, mouseY)
+				data.push(new Point(mouseX, mouseY, valid));
+				break;
+			default:
+				break;
+		}
 	}
 }
 
