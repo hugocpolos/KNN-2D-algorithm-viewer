@@ -2,18 +2,19 @@ var mode = 0;
 const div = 10;
 var K = 9;
 var Flood = 0; 
+
 function setup(){
 	mode = 0;
 	K = 9;
 	Flood = 0; 
-	createCanvas(600,600);
-	
+	createCanvas(600,600);	
 	data = [];
 }
 
 function draw(){
 	background(255);
 	loadGrid();
+	
 	for (let i = 0; i<data.length; i++){
 		data[i].display();
 	}
@@ -21,7 +22,6 @@ function draw(){
 	if(Flood){
 		runFlood();
 	}
-	
 	
 	showMode();
 	showFlood();
@@ -45,7 +45,6 @@ function mousePressed(){
 		default:
 			break;
 	}
-	
 }
 
 function keyPressed(){
@@ -84,7 +83,6 @@ function showMode(){
 			break;
 		default:break;
 	}
-	
 }
 
 function showFlood(){
@@ -133,7 +131,6 @@ function KNN(x,y){
 			cont_false++;
 		}
 	}
-
 	return cont_true > cont_false;
 }
 
