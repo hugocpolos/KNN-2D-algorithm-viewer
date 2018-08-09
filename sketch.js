@@ -9,6 +9,7 @@ function setup(){
 	Flood = 0; 
 	createCanvas(600,600);	
 	data = [];
+	fill(0);
 }
 
 function draw(){
