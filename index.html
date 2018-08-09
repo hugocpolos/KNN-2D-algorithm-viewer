@@ -1,0 +1,52 @@
+<html>
+<head>
+  <title>P5 Example</title>
+  <meta charset="UTF-8">
+  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/p5.dom.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/p5.sound.js"></script>
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+  <script language="javascript" type="text/javascript" src="point.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 0;
+      margin: 0;
+      margin-top: 30px;
+      background-color: #384e5a;
+      color: #ffffff;
+    }
+    canvas{
+      display: block;
+      float: left;
+      margin-left: 25%;
+      margin-right: auto;
+      margin-top: 45px;
+      border: black solid;
+    }
+    #instr{
+      margin-left: 15%;
+      margin-bottom: 35px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id = instr>
+    <h1>
+      Visualizador do algoritmo de aprendizado de máquina KNN.
+    </h1>
+    <p>
+      Insira dados com o mouse, no modo True, False ou Learn.<br>
+      O modo Learn deduzirá o valor do dado de acordo com o algoritmo KNN.<br>
+      O modo de Flood inserirá dados aleatórios no grid, deduzindo seu valor.<br>
+    </p>
+
+    Instruções:<br>
+    Z - altera o fator K.<br>
+    X - Altera o modo de inserção de dados.<br>
+    S - Inicia / Para o flooding de dados.<br>
+    R - Reinicia o Programa.<br>
+  <div id = instr>
+</body>
+</html>
